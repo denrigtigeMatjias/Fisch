@@ -496,18 +496,16 @@ function loadScript()
 end
 
 -- Script execution logic
-if versionCheck == true then
-      if VersionCheck() then
-            loadScript()
-      else
-            local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/denrigtigeMatjias/FluentBackup/refs/heads/main/main.lua"))()
+if versionCheck and VersionCheck() then
+      loadScript()
+elseif versionCheck and not VersionCheck() then
+      local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/denrigtigeMatjias/FluentBackup/refs/heads/main/main.lua"))()
 
-            Fluent:Notify({
-                  Title = "Fisch",
-                  Content = "Server and script version mismatch. Please update or change versionCheck to false. Note this might lead to problems or ban",
-                  Duration = 10
-            })
-      end
+      Fluent:Notify({
+            Title = "Fisch",
+            Content = "Server and script version mismatch. Please update or change versionCheck to false. Note this might lead to problems or ban",
+            Duration = 10
+      })
 else
       loadScript()
       local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/denrigtigeMatjias/FluentBackup/refs/heads/main/main.lua"))()
