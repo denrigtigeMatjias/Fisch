@@ -4,7 +4,7 @@ local character = lp.Character
 
 local versionCheck = true
 
-local version = "1.08.1"
+local version = "1.09.1"
 local gameVersion = game:GetService("ReplicatedStorage").world.version.Value
 print(gameVersion)
 
