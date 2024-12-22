@@ -1,1 +1,1 @@
-Script: ```loadstring(game:HttpGet("https://raw.githubusercontent.com/denrigtigeMatjias/Fisch/refs/heads/main/loader.lua"))()```
+Script: ```loadstring(game:HttpGet("https://raw.githubusercontent.com/denrigtigeMatjias/Fisch/main/loader.lua"))()```
