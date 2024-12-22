@@ -1,8 +1,7 @@
 -- https://denrigtigematjias.github.io/
-if game.PlaceId == 16732694052 then
-      return
-else
-      while wait(100000) do end
+if not game.PlaceId == 16732694052 then
+    print("Wrong Game")
+    while wait(10000) do end
 end
 
 local url = "https://render-mzyi.onrender.com/increment/Fisch"
