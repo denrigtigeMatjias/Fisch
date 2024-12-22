@@ -3,11 +3,12 @@ getgenv().config = {
     Players = game:GetService("Players"),
     VirtualInputManager = game:GetService("VirtualInputManager"),
     GuiService = game:GetService("GuiService"),
-    
+    ReplicatedStorage = game:GetService("ReplicatedStorage"),
+
     -- Variables
-    player = getgenv().config.Players.LocalPlayer,
-    character = getgenv().config.player:WaitForChild("Character"),
-    humanoidRootPart = getgenv().config.charcter:WaitForChild("HumanoidRootPart"),
+    player = game:GetService("Players").LocalPlayer,
+    character = game:GetService("Workspace"):FindFirstChild(player.Name),
+    humanoidRootPart = game:GetService("Workspace"):FindFirstChild(player.Name):WaitForChild("HumanoidRootPart"),
     auto_shake_delay = 0.1,
 
     -- Toggles
