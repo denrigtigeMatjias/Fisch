@@ -74,7 +74,7 @@ do
 
     spawn(function()
         while wait(0.1) do
-            if getgenv().shake_toggle then
+            if getgenv().config.shake_toggle then
                 local shakeButton = game:GetService("Players").LocalPlayer:FindFirstChild("PlayerGui")
                     :FindFirstChild("shakeui")
                     :FindFirstChild("safezone")
@@ -94,7 +94,7 @@ do
 
     spawn(function()
         while wait(0.1) do
-            if getgenv().reel_toggle then
+            if getgenv().config.reel_toggle then
                 getgenv().auto_reel()
             end
         end
@@ -102,7 +102,7 @@ do
 
     local FreezeToggle = AutofarmSettingsSection:AddToggle("Freeze", {Title = "Freeze", Default = false })
     FreezeToggle:OnChanged(function()
-        if getgenv().freeze_toggle then
+        if getgenv().config.freeze_toggle then
             getgenv().config.humanoidRootPart.Anchored = true
         else
             getgenv().config.humanoidRootPart.Anchored = false
@@ -129,12 +129,11 @@ SaveManager:SetIgnoreIndexes({})
 -- use case for doing it this way:
 -- a script hub could have themes in a global folder
 -- and game configs in a separate folder per game
-InterfaceManager:SetFolder("FluentScriptHub")
-SaveManager:SetFolder("FluentScriptHub/specific-game")
+InterfaceManager:SetFolder("matjiasScripts")
+SaveManager:SetFolder("matjiasScripts/Fisch")
 
 InterfaceManager:BuildInterfaceSection(Tabs.Settings)
 SaveManager:BuildConfigSection(Tabs.Settings)
-
 
 Window:SelectTab(1)
 
