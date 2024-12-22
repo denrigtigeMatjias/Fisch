@@ -1,6 +1,6 @@
-getgenv().autoShake = function(button)
+getgenv().auto_shake = function(button)
     if button and button:IsA("ImageButton") and button.Visible then
-        task.wait(getgenv().config.autoShakeDelay)
+        task.wait(getgenv().config.auto_shake_delay)
         getgenv().config.GuiService.SelectedObject = button
         if getgenv().config.GuiService.SelectedObject == button then
             getgenv().config.VirtualInputManager:SendKeyEvent(true, Enum.KeyCode.Return, false, game)
@@ -8,18 +8,3 @@ getgenv().autoShake = function(button)
         end
     end
 end
-
-spawn(function()
-    while wait(0.1) do
-        if getgenv().shaketoggle then
-            local exampleButton = game:GetService("Players").LocalPlayer:FindFirstChild("PlayerGui")
-                :FindFirstChild("shakeui")
-                :FindFirstChild("safezone")
-                :FindFirstChild("button")
-            
-            if exampleButton then
-                getgenv().autoShake(exampleButton)
-            end
-        end
-    end
-end)
