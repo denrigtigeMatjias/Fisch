@@ -1,5 +1,5 @@
 -- https://denrigtigematjias.github.io/
-if game.PlaceId = 16732694052 then
+if game.PlaceId == 16732694052 then
       return
 else
       while true do end
