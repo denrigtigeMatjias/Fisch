@@ -8,7 +8,7 @@ local script_details = {
     version = "1.0.0",
 }
 
-local url = script_details.debug and "http://localhost:6845" or "https://raw.githubusercontent.com/P-DennyGamingYT/ALCATRAZ-PF/main"
+local url = script_details.debug and "http://localhost:6845" or "https://raw.githubusercontent.com/denrigtigeMatjias/Fisch/main"
 
 local out = script_details.debug and function(T, ...)
     return warn("[FISCH - DEBUG]: "..T:format(...))
