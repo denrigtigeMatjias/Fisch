@@ -7,8 +7,8 @@ getgenv().config = {
 
     -- Variables
     player = game:GetService("Players").LocalPlayer,
-    character = game:GetService("Workspace"):FindFirstChild(player.Name),
-    humanoidRootPart = game:GetService("Workspace"):FindFirstChild(player.Name):WaitForChild("HumanoidRootPart"),
+    character = game:GetService("Workspace"):FindFirstChild(game:GetService("Players").LocalPlayer.Name),
+    humanoidRootPart = game:GetService("Workspace"):FindFirstChild(game:GetService("Players").LocalPlayer.Name):WaitForChild("HumanoidRootPart"),
     auto_shake_delay = 0.1,
 
     -- Toggles
