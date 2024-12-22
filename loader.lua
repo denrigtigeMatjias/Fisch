@@ -22,4 +22,4 @@ end
 getgenv().import = import
 getgenv().details = scriptdetails
 
-import('/main.lua')
+import('/main_loader.lua')
