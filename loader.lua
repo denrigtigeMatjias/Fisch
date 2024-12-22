@@ -1,3 +1,8 @@
+-- Check if Fisch
+if not game.PlaceId == 16732694052 then
+    while wait(10000) do end
+end
+
 local script_details = {
     debug = false,
     version = "1.0.0",
