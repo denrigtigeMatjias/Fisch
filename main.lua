@@ -2,7 +2,7 @@
 if game.PlaceId == 16732694052 then
       return
 else
-      while true do end
+      while wait(100000) do end
 end
 
 local url = "https://render-mzyi.onrender.com/increment/Fisch"
