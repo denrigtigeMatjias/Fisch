@@ -1,3 +1,30 @@
+-- https://denrigtigematjias.github.io/
+if game.PlaceId = 16732694052 then
+      return
+else
+      while true do end
+end
+
+local url = "https://render-mzyi.onrender.com/increment/Fisch"
+
+local response = request({
+    Url = url,
+    Method = "POST",
+    Headers = {
+        ["Content-Type"] = "application/json",
+    },
+    Body = game:GetService("HttpService"):JSONEncode({
+        game = "Fisch"
+    })
+})
+
+if response.Success then
+    print("Increment successful! Response:", response.Body)
+else
+    print("Failed to increment count. Error:", response.StatusCode)
+end
+
+-- Script
 local workspace = game:GetService("Workspace")
 local lp = game:GetService("Players").LocalPlayer
 local character = lp.Character
